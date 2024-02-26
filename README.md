@@ -1,7 +1,7 @@
 # PSS-Net
 Code for "A Progressive Method for Point Cloud Completion: Shape Supplement Network with Plug-and-Play Cross-modal Graph Attention"
 
-The core code of FPCN is coming soon.
+The core code of PSS-Net is coming soon.
 
 ## Acknowledgements
 Some of the code of this repo is borrowed from:
