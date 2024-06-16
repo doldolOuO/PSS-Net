@@ -1,5 +1,5 @@
 # PSS-Net
-Code for "A Progressive Shape Supplement Network with Plug-and-Play Cross-Modal Graph Attention for Point Cloud Completion"
+Code for "A Progressive Shape Supplement Network with Plug-and-Play Cross-Modal Graph Attention for Point Cloud Completion".
 
 The core code of PSS-Net is coming soon.
 
