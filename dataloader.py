@@ -78,29 +78,11 @@ class ViPCDataLoader(Dataset):
         self.rendering_path = os.path.join(data_path, 'ShapeNetViPC-View')
 
         for key in self.filelist:
-            if status == "train":
-                if category != 'all':
-                    if key.split(';')[0] != self.cat_map[category]:
-                        continue
-                else:
-                    if key.split(';')[0] == self.cat_map['bench']:
-                        continue
-                    if key.split(';')[0] == self.cat_map['monitor']:
-                        continue
-                    if key.split(';')[0] == self.cat_map['speaker']:
-                        continue
-                    if key.split(';')[0] == self.cat_map['firearm']:
-                        continue
-                    if key.split(';')[0] == self.cat_map['cellphone']:
-                        continue
-                self.cat.append(key.split(';')[0])
-                self.key.append(key)
-            else:
-                if category != 'all':
-                    if key.split(';')[0] != self.cat_map[category]:
-                        continue
-                self.cat.append(key.split(';')[0])
-                self.key.append(key)
+            if category != 'all':
+                if key.split('/')[0] != self.cat_map[category]:
+                    continue
+            self.cat.append(key.split(';')[0])
+            self.key.append(key)
 
         self.transform = torchvision.transforms.Compose([
             torchvision.transforms.Resize(138),
