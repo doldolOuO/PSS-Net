@@ -116,10 +116,6 @@ for epoch in range(resume_epoch, resume_epoch + opt.n_epochs+1):
             loss_stage1 = loss_cd(stage1, out[1])
             loss_stage2 = loss_cd(stage2, out[2])
             loss_stage3 = loss_cd(gt, out[3])
-            loss_stage0 = torch.mean(loss_stage0, 0)
-            loss_stage1 = torch.mean(loss_stage1, 0)
-            loss_stage2 = torch.mean(loss_stage2, 0)
-            loss_stage3 = torch.mean(loss_stage3, 0)
             
             loss = loss_stage0 + loss_stage1 + loss_stage2 + loss_stage3
             optimizer.zero_grad()
